@@ -1,0 +1,56 @@
+jenkins set up
+--------------------------------------------------------------------------------------------------------------------------
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+amazon-linux-extras install java-openjdk11 -y
+yum install jenkins -y
+systemctl status jenkins
+systemctl restart jenkins
+__________________________________________________________________________________________________________________________________________
+maven setup
+-----------------------------------------------------------------------------------------------------------------------------
+wget https://downloads.apache.org/maven/maven-3/3.9.2/binaries/apache-maven-3.9.2-bin.tar.gz
+tar -zxvf filename
+yum install maven -y
+mvn -version
+mvn archetype:generate
+mvn compile
+mvn test
+mvn package
+mvn install
+mvn clean
+mvn clean package
+_________________________________________________________________________________________________________________________
+GIT setup
+------------------------------------------------------------------------------------------------------------------
+yum install git -y
+git --version
+git init .
+git status
+git add file name
+git commit -m "message" filename
+git log
+git show commitid
+touch filename
+git config user:name "malli"
+git config user:email "malli@ccit.com"
+git reset --hard HEAD~1 or 3
+git reset --soft HEAD~1 or 3
+git update-ref -d HEAD(to delete all commits)
+sudo yum update -y
+
+____________________________________________________________________________________________
+GITHUB setup
+---------------------------------------------------------------------------------------------------------
+git remote add origin URL of repository
+git remote rm origin
+git push -u origin branchname
+git pull origin branchname
+git push -u origin --all
+git branch -a
+git push -u origin --delete branchname
+git remote -v to konw present connected reopsitory details
+
+
+
+
